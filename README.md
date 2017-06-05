@@ -1,9 +1,13 @@
 ***Video Portal backend***
+
+
 This is the backend API code that needs to be consumed by front-end applications.
 
 All front-end related files are located in "/client" folder.
 
 ***Front-end application introduction***
+
+
 This is a single page app that is developed mainly base on AngularJS 1,Masonry.js, and Bootstrap. 
 
 * User may need to login to view the contents. Authenticated user will see video listings on index page.  
