@@ -20,7 +20,8 @@ To run application:
 2. Run ‘npm install’ to download npm packages. 
 3. Run ‘npm start’ to start the backend API. 
 4. Visit app at http://localhost:8080/ 
-5. Login with username 'ali' or 'tom' or 'harry' and password as 'password'6. Click ```Logout``` before leaving the page.
+5. Login with username 'ali' or 'tom' or 'harry' and password as 'password'
+6. Click "Logout" before leaving the page.
 
 ## Unit test
 This project use "Jasmine" and "Karma", and browser "Phantomjs" for unit testing.
