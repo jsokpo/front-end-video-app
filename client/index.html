@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	
+	<title>Video Portal App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="/css/myCss.css">
+
+</head>
+<body ng-controller='AppController'>
+	
+	<div id="wrapper">
+		<div class="bgimage"></div>
+		<login ng-show="login.show" ng-init="login.show='true'"></login>
+		<videos ng-show="!login.show" scroll style="overflow: {{stopScrolling.flow}};position:{{stopScrolling.pos}}"></videos>
+		<popup ng-show="popup.show"></popup>
+	</div>
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-masonry.js"></script>
+	<script type="text/javascript" src="/js/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/js/angular-md5.min.js"></script>
+	<script type="text/javascript" src="/index.controller.js"></script>
+</body>
+</html>

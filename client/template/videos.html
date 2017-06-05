@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-inverse ">
+  <div class="container-fluid">
+        <a class="navbar-brand" href="#">VPortal</a>
+        <a class="navbar-brand navbar-right" style="float:right;" href="#" ng-click='logout()'>Logout</a>
+  </div>
+</nav>
+
+<div id="masonryContainer" masonry column-width=20 origin-top=true class="grid col-xs-11 col-xs-offset-1 col-md-10 col-md-offset-2" >
+    <div class="masonry-brick grid-item thumbnail col-xs-5 col-md-3" ng-repeat="video in videos | startFrom:page.currentPageNum:page.numVideosEachPage track by $index" > 
+          <div class="keepcenter">
+              <video id="video" class="col-xs-12 col-sm-12" remove-controls>
+    		        <source ng-src="{{video.url}}" type="video/mp4">
+    		        Your browser does not support HTML5 video.
+    		      </video>
+          </div>
+		  
+          <div class="caption">
+            <a href='#!' ng-click="popupOpen($index)"><p class="">{{video.name}}</p></a>    
+            <!--<p class="">{{video.description}}</p>    	     -->
+        	<span class="glyphicon glyphicon-star" style="color:gold" aria-hidden="true" ng-repeat="x in video.rateStar track by $index"></span>
+          </div>
+    </div>
+</div>
+
+<div class="col-sm-12 keepcenter">
+    <a class="btn btn-default keepcenter" style="margin:10px" href="#" ng-click="page.pageBtn('last')"  ng-if="page.currentPageNum>1">Last Page</a>
+    <a class="btn btn-default keepcenter" style="margin:10px" href="#" ng-click="page.pageBtn('next')" ng-if="videos.length>page.currentPageNum*page.numVideosEachPage">Next Page</a>
+</div>
+

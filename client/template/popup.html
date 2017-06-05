@@ -1,0 +1,21 @@
+<div id='popup' class="">
+    
+    <span class="closeBtn col-sm-offset-11 col-sm-1 col-xs-offset-10 col-xs-2" ng-click="popupClose()"><h1><span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span></h1></span>
+    <div class="myFont keepcenter" style="margin:20px">Rate this video:
+    	<span ng-repeat="x in [0,1,2,3,4] track by $index">
+    	    <span class="glyphicon glyphicon-star-empty" style="" aria-hidden="true" ng-click="rating($index)" ng-style="popup.rateStyle[$index]"></span>
+    	</span>
+    </div>
+    <div class="keepcenter">
+        <video controls autoplay id="popupVideo" class="col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
+    	    <source ng-src="{{popup.url}}" type="video/mp4" >
+    	    Your browser does not support HTML5 video.
+    	</video>
+    </div>
+    <div class="myFont col-sm-10 col-sm-offset-1" style="margin-top:20px">
+        <h2>{{popup.name}}</h2>
+        <p>{{popup.description}}</p>
+        Total Rate: <span class="glyphicon glyphicon-star" style="color:gold" aria-hidden="true" ng-repeat="x in popup.rateStar track by $index"></span>
+    </div>
+    <div class="myFont keepcenter col-sm-12" style="margin-top: 10vh;"><p>_azheng72_</p></div>
+</div>

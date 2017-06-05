@@ -1,0 +1,96 @@
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+videos {
+  width: 100%;
+}
+
+.bgimage {
+  position: fixed;
+  background-image: url('/image/background.jpg');
+  width:100%;
+  height: 100%;
+  z-index: -100;
+  -webkit-background-size: cover; /* For WebKit*/
+  -moz-background-size: cover;    /* Mozilla*/
+  -o-background-size: cover;      /* Opera*/
+  background-size: cover;         /* Generic*/
+}
+
+@keyframes ani-in {
+  0% {margin-top:50vh}
+  50% {margin-top:-5vh;}
+  100% {margin-top:0vh;}
+}
+
+.aniBar{
+  animation-name: ani-in;
+  animation-duration: 1s;
+  margin-top:0vh;
+}
+
+@keyframes ani-leave {
+  0% {margin-top:0vh}
+  50% {margin-top:5vh;}
+  100% {margin-top:-100vh;}
+}
+
+.aniBar.leave{
+  animation-name: ani-leave;
+  animation-duration: 1s;
+  margin-top:-50vh;
+}
+
+.keepcenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.keepVerticalcenter {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grid-item {
+  /*width: 300px;*/
+  /*max-width:250px;*/
+  padding-top: 10px;
+  margin-bottom: 50px;
+  background: rgba(0,0,0,0.8);
+  border: 0px solid #333;
+  border-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#popup{
+  position: fixed;
+  overflow:scroll;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#popupVideo{
+    z-index: 100;
+    max-height: 80vh;
+}
+
+.myFont {
+  font-family: sans-serif;
+  color: white;
+}
+
+.closeBtn {
+  position: fixed;
+  color:purple;
+}
+

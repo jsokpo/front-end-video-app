@@ -1,0 +1,25 @@
+<div class="keepVerticalcenter aniBar col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 " ng-class="login.animation">
+
+	<div class="alert alert-danger" role="alert" ng-show="login.error">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{login.message}}
+	</div>
+  	
+	<div>
+    <div class="" style="margin-bottom:10px">
+      <input type="username" class="form-control" id="inputEmail" placeholder="Username" name="username" ng-model='login.username'>
+    </div>
+	</div>
+	
+  <div>
+      <div class="" style="margin-bottom:10px">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" ng-model='login.password'>
+      </div>
+  </div>
+	  
+  <div class="" style="float:right">
+    <button class="btn btn-primary btn-sm" ng-click='loginSubmit()'>Login</button>
+  </div>
+
+</div>  
