@@ -1,7 +1,7 @@
 ***Video Portal backend***
 
 
-This is the backend API code that needs to be consumed by front-end applications.
+This is the backend API code that needs to be consumed by front-end applications. The application allows users to login to the system and rate videos based on their satisfaction and content. 
 
 All front-end related files are located in "/client" folder.
 
@@ -16,7 +16,7 @@ This is a single page app that is developed mainly base on AngularJS 1,Masonry.j
 * Maximum 50 videos for one page, click ```Next page``` for more videos.
 
 To run application:
-1. Ensure MongoDB is running
+1. Ensure MongoDB is installed and running
 2. Run ‘npm install’ to download npm packages. 
 3. Run ‘npm start’ to start the backend API. 
 4. Visit app at http://localhost:8080/ 
